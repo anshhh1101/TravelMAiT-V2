@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MoodForm          from './MoodForm';
-import ItineraryTimeline from './ItineraryTimeline';
+import ItineraryTimeline from "./itineraryTimeline"
 import styles            from './PlannerPage.module.css';
 
 export default function PlannerPage() {
