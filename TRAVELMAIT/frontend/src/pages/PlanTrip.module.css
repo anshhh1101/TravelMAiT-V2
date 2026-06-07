@@ -1,0 +1,53 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 100px 5vw 4em;
+}
+
+.submitted {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.submitted h2 {
+  font-family: var(--font-head);
+  font-size: 2em;
+  color: var(--teal);
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
+.submitted p {
+  font-size: 0.95em;
+  color: var(--muted);
+}
+
+.submitted strong {
+  color: var(--text);
+}
+
+.backBtn {
+  margin-top: 1em;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.7em 1.5em;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: fit-content;
+}
+
+.backBtn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}

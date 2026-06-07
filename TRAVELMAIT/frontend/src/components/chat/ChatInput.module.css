@@ -1,0 +1,77 @@
+/* ── Outer bar ──────────────────────────────── */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 0 12px 0 20px;
+  height: 54px;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.bar:focus-within {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.idle {
+  height: 58px;
+  border-radius: 32px;
+  padding: 0 14px 0 22px;
+}
+
+/* ── Textarea ───────────────────────────────── */
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  max-height: 120px;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  display: block;
+  align-self: center;
+}
+
+.textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.65;
+}
+
+.textarea:disabled { opacity: 0.5; }
+
+/* ── Send button ────────────────────────────── */
+.sendBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: none;
+  color: #0d1117;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.sendBtn:hover:not(:disabled) { transform: scale(1.08); }
+
+.sendBtn:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.25);
+  cursor: not-allowed;
+}

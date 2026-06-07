@@ -1,0 +1,152 @@
+.section {
+  background: var(--bg2);
+  border-radius: var(--radius-lg);
+  margin: 2em 3vw;
+  padding: 4em 3em;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.4em;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.8em 1.5em;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Premium card variant */
+.premiumCard {
+  border-color: rgba(255, 200, 0, 0.2);
+  background: linear-gradient(
+    135deg,
+    var(--card) 0%,
+    rgba(255, 200, 0, 0.03) 100%
+  );
+}
+
+.premiumCard:hover {
+  border-color: rgba(255, 200, 0, 0.45);
+  box-shadow: 0 10px 24px rgba(255, 200, 0, 0.08);
+}
+
+/* Premium badge */
+.premiumBadge {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 200, 0, 0.1);
+  border: 1px solid rgba(255, 200, 0, 0.3);
+  color: goldenrod;
+  font-family: var(--font-ui);
+  font-size: 0.68em;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.premiumBadge i {
+  font-size: 0.85em;
+}
+
+/* Large Number */
+.stepNum {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-family: var(--font-head);
+  font-size: 3.5em;
+  line-height: 1;
+  color: rgba(95, 179, 163, 0.1);
+  z-index: 0;
+}
+
+/* Icon */
+.iconWrap {
+  width: 46px;
+  height: 46px;
+  background: rgba(95, 179, 163, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 1.8em; /* space below premium badge */
+  position: relative;
+  z-index: 1;
+}
+
+.iconWrap i {
+  color: var(--teal);
+  font-size: 1.1em;
+}
+
+/* Cards without premium badge — reset margin-top */
+.card:not(.premiumCard) .iconWrap {
+  margin-top: 0;
+}
+
+/* Title */
+.title {
+  font-family: var(--font-ui);
+  font-size: 0.96em;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.55em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Description */
+.desc {
+  font-size: 0.82em;
+  color: var(--muted);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet */
+@media (max-width: 760px) {
+  .section {
+    margin: 1em 0;
+    border-radius: 0;
+    padding: 3em 1.5em;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 1.6em 1.3em;
+  }
+  .stepNum {
+    font-size: 3em;
+  }
+}

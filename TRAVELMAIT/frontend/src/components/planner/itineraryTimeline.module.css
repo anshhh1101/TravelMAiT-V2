@@ -1,0 +1,122 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.day {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  padding: 1.5em;
+  border-bottom: 1px solid var(--border);
+  background: var(--card2);
+}
+
+.dayBadge {
+  background: rgba(95, 179, 163, 0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-family: var(--font-head);
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  padding: 0.4em 1em;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.dayInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.dayTitle {
+  font-family: var(--font-ui);
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dayLocation {
+  font-size: 0.82em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dayLocation i {
+  color: var(--teal);
+  font-size: 0.9em;
+}
+
+.activities {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.activity {
+  display: grid;
+  grid-template-columns: 80px 20px 1fr;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.activityTime {
+  font-size: 0.75em;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+.activityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal3);
+  border: 2px solid var(--teal);
+  margin-top: 4px;
+  justify-self: center;
+}
+
+.activityContent h4 {
+  font-family: var(--font-ui);
+  font-size: 0.92em;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.3em;
+}
+
+.activityContent p {
+  font-size: 0.82em;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gemBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(95, 179, 163, 0.08);
+  border: 1px solid rgba(95, 179, 163, 0.2);
+  color: var(--teal);
+  font-size: 0.72em;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-top: 0.5em;
+}
