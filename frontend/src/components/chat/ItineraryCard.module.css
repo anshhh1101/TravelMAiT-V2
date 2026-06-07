@@ -1,0 +1,161 @@
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, background 0.25s;
+  animation: fadeSlideUp 0.35s ease both;
+}
+
+.card:hover {
+  border-color: rgba(45, 212, 191, 0.35);
+  background: rgba(45, 212, 191, 0.03);
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Photo ──────────────────────────────────── */
+.photoWrap {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .photo {
+  transform: scale(1.04);
+}
+
+/* ── Budget badge overlaid on photo ─────────── */
+.budgetBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: var(--font-ui);
+  font-size: 0.68em;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.free   { background: rgba(45,212,191,0.25);  color: var(--teal); border: 1px solid rgba(45,212,191,0.4); }
+.low    { background: rgba(74,222,128,0.20);  color: #4ade80;     border: 1px solid rgba(74,222,128,0.4); }
+.medium { background: rgba(251,191,36,0.20);  color: #fbbf24;     border: 1px solid rgba(251,191,36,0.4); }
+.high   { background: rgba(248,113,113,0.20); color: #f87171;     border: 1px solid rgba(248,113,113,0.4); }
+
+/* ── Body ───────────────────────────────────── */
+.body {
+  padding: 0.9em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+/* ── Top row ────────────────────────────────── */
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.iconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(45,212,191,0.1);
+  border: 1px solid rgba(45,212,191,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+
+.meta { flex: 1; min-width: 0; }
+
+.name {
+  font-family: var(--font-ui);
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+
+.region {
+  font-family: var(--font-ui);
+  font-size: 0.73em;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Description ────────────────────────────── */
+.desc {
+  font-family: var(--font-ui);
+  font-size: 0.78em;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Mood tags ──────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  font-family: var(--font-ui);
+  font-size: 0.68em;
+  color: var(--muted);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 8px;
+  text-transform: capitalize;
+}
+
+/* ── Footer ─────────────────────────────────── */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 0.5em;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 0.73em;
+  color: var(--muted);
+}
+
+.footer i {
+  color: var(--teal);
+  margin-right: 4px;
+}
+
+@media (max-width: 600px) {
+  .cards { grid-template-columns: 1fr; }
+}
