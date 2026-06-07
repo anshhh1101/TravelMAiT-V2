@@ -1,4 +1,4 @@
-import styles from './ItineraryTimeline.module.css';
+import styles from "./itineraryTimeline.module.css"
 
 export default function ItineraryTimeline({ days }) {
   return (
