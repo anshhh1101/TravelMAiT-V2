@@ -220,3 +220,4 @@ export default function MoodForm({ onSubmit }) {
     </div>
   );
 }
+

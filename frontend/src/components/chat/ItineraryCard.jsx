@@ -90,3 +90,4 @@ export default function ItineraryCard({ place, index }) {
     </div>
   );
 }
+
