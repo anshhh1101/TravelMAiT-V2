@@ -28,3 +28,4 @@ export function useSlideshow(count, intervalMs = 5000) {
   return { current, goTo, next, prev };
 }
 
+

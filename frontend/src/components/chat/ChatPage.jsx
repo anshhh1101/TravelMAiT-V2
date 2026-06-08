@@ -30,7 +30,7 @@ export default function ChatPage() {
         content: m.text || '',
       }));
 
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/chat`, {
+      const res = await fetch(https://travelmait-backend.onrender.com/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,4 +104,5 @@ export default function ChatPage() {
     </div>
   );
 }
+
 
