@@ -26,7 +26,7 @@ export default function Register() {
     
     try {
       // Send the data to your Flask backend
-      const response = await fetch(https://travelmait-backend.onrender.com/api/auth/register`, {
+      const response = await fetch(`https://travelmait-backend.onrender.com/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,5 +104,6 @@ export default function Register() {
     </div>
   );
 }
+
 
 

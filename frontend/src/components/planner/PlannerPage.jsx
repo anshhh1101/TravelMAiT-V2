@@ -14,7 +14,7 @@ export default function PlannerPage() {
     setItinerary(null);
 
     try {
-      const res = await fetch(https://travelmait-backend.onrender.com/api/itinerary`, {
+      const res = await fetch(`https://travelmait-backend.onrender.com/api/itinerary`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,5 +88,6 @@ export default function PlannerPage() {
     </div>
   );
 }
+
 
 
